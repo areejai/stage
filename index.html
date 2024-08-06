@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .signin-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .signin-container h2 {
+            margin-bottom: 20px;
+            color: #021628;
+        }
+        .signin-container input[type="text"],
+        .signin-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #021628;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .signin-container input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #021628;
+            border: 2px solid #021628;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .signin-container input[type="submit"]:hover {
+            background-color: #002a57;
+            border-color: #002a57;
+            transform: scale(1.05);
+        }
+        .signin-container input[type="submit"]:active {
+            background-color: #001d3d;
+            border-color: #001d3d;
+        }
+        .signin-container a:hover {
+            text-decoration: underline;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #d1d1d1; 
+            padding: 10px 20px;
+        }
+        .logo {
+            height: 50px; 
+            width: auto;
+        }
+        footer {
+            background-color: #d1d1d1; 
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#home"><img class="logo" src="img/bh-bank-new-rouge-removebg-preview.png" alt="Logo"></a>
+        </div>
+    </header>
+    <div class="content">
+    <div class="signin-container">
+        <h2>Sign In</h2>
+        <form action="signin.php" method="post">
+            <input type="text" name="matricule" placeholder="Matricule" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign In" >
+        </form>
+    </div>
+    </div>
+    <footer>
+        <div class="footer__content">
+            <p>&copy; 2024 . All rights reserved.</p>
+            <a class="footer__link">Privacy Policy</a>
+            <a class="footer__link">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>
